@@ -55,7 +55,5 @@ public class ConsoleExercises {
         scan.useDelimiter("(A|a)[a-z]+");
         String firstD = scan.next();
         System.out.println("D1: " + firstD);
-
-
     }
 }
