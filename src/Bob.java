@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Bob {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in)
+                .useDelimiter("\n");
 
         byte counter = 0;
         while(true){
@@ -19,4 +20,6 @@ public class Bob {
         if(str.trim().equals("")) return "Fine. Be that way!";
         else return "Whatever.";
     }
+
+
 }
