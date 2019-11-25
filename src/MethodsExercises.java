@@ -1,15 +1,14 @@
-import org.w3c.dom.ls.LSOutput;
-
-import java.math.BigInteger;
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) throws IllegalAccessException {
-        System.out.println(multiplyRecursion(8,10));
-
-        askForNumber();
-        System.out.println("3! = " + getFactorials(3));
-        System.out.println("The highest factorial of a L is " + findTheHighestFactorial());
+//        System.out.println(multiplyRecursion(8,10));
+//
+//        askForNumber();
+//        System.out.println("3! = " + getFactorials(3));
+//        System.out.println("The highest factorial of a L is " + findTheHighestFactorial());
+        rollTheDice();
     }
 
 
@@ -64,7 +63,7 @@ public class MethodsExercises {
         return (long)num * getFactorials(num -1);
     }
 
-    //z: find the highest
+    //z: find the highest \
     public static long findTheHighestFactorial(int num){
         String stringAnswer = String.valueOf(getFactorials(num));
         String max = String.valueOf(Long.MAX_VALUE);
@@ -75,6 +74,27 @@ public class MethodsExercises {
     //y: overload :: find the highest
     public static long findTheHighestFactorial(){
         return findTheHighestFactorial(1);
+    }
+
+
+    //z: roll dice
+    public static void rollTheDice(){
+        Scanner scan = new Scanner(System.in).useDelimiter("\n");
+        System.out.println("How many sides does your dice have?");
+        int sides = scan.nextInt();
+//        clear
+        scan.nextLine();
+        System.out.println("Ready to Roll? (Y/N)");
+        String answer = scan.nextLine();
+        if(answer.equalsIgnoreCase("Y")){
+            Random random = new Random();
+            int rolled = random.nextInt(sides + 1);
+            System.out.println("Your number is: " + rolled);
+            return;
+        }
+        System.out.println("GoodBye.");
+        return;
+
     }
 
 
