@@ -2,9 +2,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HighLow {
-
+    //! THIS IS HOW U DECLARE A SCANNER GLOBALLY
+//    static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
-//        playGame();
         System.out.println(playGame());
     }
     //! GET RANDOM
