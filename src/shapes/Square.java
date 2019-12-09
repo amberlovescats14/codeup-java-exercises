@@ -19,17 +19,14 @@ public class Square extends Quadrilateral implements Measurable {
     }
 
 
+
     @Override
-    public void setLength() {
-        this.length = side;
-        setWidth();
+    public void setLength(double length) {
+        this.side = length;
     }
 
     @Override
-    public void setWidth() {
-        this.width = side;
-        setLength();
+    public void setWidth(double width) {
+        setLength(width);
     }
-
-
 }

@@ -6,10 +6,10 @@ public class CircleApp {
 
     private Input input = new Input();
 
-    public CircleApp() {
+    public CircleApp() throws Exception {
         runApplication();
     }
-    private void runApplication(){
+    private void runApplication() throws Exception {
         double radius = askRadius();
         Circle circle = createCircle(radius);
         displayInfo(circle);
@@ -26,11 +26,11 @@ public class CircleApp {
         System.out.println("Circumference = " + circle.getCircumference());
     }
 
-    private void askToContinue(){
+    private void askToContinue() throws Exception {
         System.out.println("Would you like to create another circle?");
         boolean answer;
         while (true){
-            answer = input.yesNo();
+            answer = input.getBoolean();
             if(!answer) break;
             runApplication();
         }

@@ -1,15 +1,14 @@
 package util;
 
 public class InputTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         var inputs = new Input();
-//
-//        System.out.println("inputs.getString() = " + inputs.getString());
-//
-        System.out.println("inputs.yesNo() = " + inputs.yesNo());
-//
-//        System.out.println("inputs.getInt() = " + inputs.getInt());
 
-//        System.out.println("inputs.getDouble(5.0, 10.0) = " + inputs.getDouble(5.0, 10.0));
+//        System.out.println("Enter Bool");
+//        System.out.println(inputs.getBoolean());
+
+        System.out.println("Enter Whole Number: ");
+        System.out.println(inputs.getInt());
+
     }
 }
