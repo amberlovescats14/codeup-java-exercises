@@ -48,6 +48,9 @@ public class Input {
         // positive numbers
         return getInt(0, Integer.MAX_VALUE,0);
     }
+    public int getInt(int min, int max){
+        return getInt(min, max, 0);
+    }
 
     //! DOUBLE
     public double getDouble(String min, String max, int count){
@@ -66,6 +69,10 @@ public class Input {
 
     public double getDouble(){
         return getDouble("0", String.valueOf(Double.MAX_VALUE), 0);
+    }
+
+    public double getDouble(String min, String max){
+        return getDouble(min, max, 0);
     }
 // end
 }
